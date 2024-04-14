@@ -674,6 +674,20 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
+}
+
+.check-text .span-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 
 .check-text-link {
@@ -683,13 +697,11 @@ img {
   color: #4d5ae5;
 }
 
-/* .check-text .visible-text-span {
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  display: inline-block;
-} */
+.modal-check:checked + .check-text .span-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
 
 .modal-button {
   border-radius: 4px;
@@ -707,5 +719,7 @@ img {
   display: block;
   margin: 0 auto;
   border: none;
+  margin-top: 24px;
 }
+
 /* ----------------------------------------------------- */
