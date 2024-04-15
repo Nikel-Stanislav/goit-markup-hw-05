@@ -598,6 +598,8 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -618,6 +620,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-open-btn {
@@ -627,10 +630,15 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  padding: 0;
   background-color: #e7e9fc;
-  border: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-open-btn:hover {
@@ -639,6 +647,18 @@ img {
 
 .modal-open-btn:hover {
   background-color: #4d5ae5;
+}
+
+.modal-open-btn:focus {
+  background-color: #4d5ae5;
+}
+
+.modal-open-btn:focus {
+  fill: #ffffff;
+}
+
+.modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
