@@ -586,14 +586,22 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   cursor: pointer;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-icon {
   fill: #ffffff;
   margin-left: 16px;
+}
+
+.footer-button:hover {
+  background-color: #404bbf;
+}
+
+.footer-button:focus {
+  background-color: #404bbf;
 }
 
 /* ______________________________________________________ */
@@ -709,6 +717,7 @@ img {
   outline: transparent;
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
 }
 
 .modal-input:focus {
@@ -781,7 +790,6 @@ img {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
   fill: transparent;
@@ -802,6 +810,10 @@ img {
 
 .input-label-wrap {
   margin-bottom: 24px;
+}
+
+.input-check:focus + .input-check-text > .check-empty {
+  border-color: #4d5ae5;
 }
 
 .input-check:checked + .input-check-text > .check-empty {
@@ -829,7 +841,14 @@ img {
   border: none;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* margin-top: 24px; */
+}
+
+.modal-button:hover {
+  background-color: #404bbf;
+}
+
+.modal-button:focus {
+  background-color: #404bbf;
 }
 
 /* ----------------------------------------------------- */
